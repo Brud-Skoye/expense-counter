@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Create / Edit";
+}
+
+@model MyWebApp.Models.Expense
+
+<div class="text-center">
+    <h1 class="display-4">Create or edit an expense</h1>
+</div>
+
+<form asp-action="CreateEditExpense" asp-controller="Home">
+    <input hidden class="form-control" type="number" placeholder="0" asp-for="Id" />
+
+    <label class="mt-4">Value</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" step="0.1" />
+
+    <label class="mt-4">Description</label>
+    <input class="form-control" type="text" placeholder="Добавить описание" asp-for="Description" />
+
+    <button class="btn btn-light mt-4" type="submit"> Подтвердить</button>
+</form>
